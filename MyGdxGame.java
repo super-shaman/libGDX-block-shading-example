@@ -39,7 +39,7 @@ public class MyGdxGame extends ApplicationAdapter {
 	
 	public static final String FRAG_SHADER = 
             "#ifdef GL_ES\n" +
-            "precision mediump int;\n" +
+            "precision mediump float;\n" +
             "#endif\n" +
             "uniform sampler2D texture1;" + 
             "varying float shade;" + 
@@ -74,7 +74,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		v[6] = pos.y;
 		v[7] = 1f;
 		v[8] = 0f;
-		v[9] = shade1;
+		v[9] = shade2;
 		v[10] = pos.x + size;
 		v[11] = pos.y - size;
 		v[12] = 1f;
@@ -159,5 +159,10 @@ public class MyGdxGame extends ApplicationAdapter {
 		texture.bind();
 		mesh.render(shader, GL20.GL_TRIANGLES, 0, v.length / 5);
 		shader.end();
+	}
+	
+	@Override
+	public void resize (int Width, int Height) {
+		camera = new OrthographicCamera(Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
 	}
 }
