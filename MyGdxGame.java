@@ -16,6 +16,8 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 
 public class MyGdxGame extends ApplicationAdapter {
 	
+	//Just copy this code into you project preferably with eclipse change the class and package name as needed and have fun!!!
+	
 	Texture texture;
 	ShaderProgram shader;
 	Mesh mesh;
@@ -103,7 +105,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		shader = createMeshShader();
 		
 		/*
-		 * here is were I am creating the block information what his is doing is creating a bunch of blocks 
+		 * here is were I am creating the block information what this is doing is creating a bunch of blocks 
 		 * in a way that is condensed, not really intended to be functional but it just gives you the basics 
 		 * of block creation. What it does allow is for you to draw multiple squares on a single mesh.
 		 * if you want to use multiple textures you will need to create multiple meshes.
@@ -150,8 +152,6 @@ public class MyGdxGame extends ApplicationAdapter {
 
 	@Override
 	public void render () {
-		Gdx.gl.glClearColor(1, 0, 0, 1);
-		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		shader.begin();
